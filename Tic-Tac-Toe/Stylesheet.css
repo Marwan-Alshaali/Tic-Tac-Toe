@@ -1,0 +1,68 @@
+:root {
+	--purple: #3e0249;	/*declared a new version of purple (define)*/
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	color: var(--purple);	/*used the previously declared purple*/
+	font-family: sans-serif;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+h1 {
+	font-size: 54px;
+	text-transform: uppercase;
+}
+
+.container {
+	padding: 40px;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+#gameboard {
+	width: 450px;
+	height: 450px;
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 40px;
+}
+
+.box {
+	height: 150px;
+	width: 150px;
+	font-size: 150px;
+	/*center the X/O inside the box (nxt 3 lines): */
+	display: flex; 
+	justify-content: center;
+	align-items: center;
+	color: var(--purple);
+	transition: 300ms;
+}
+
+.box:hover {
+	cursor: pointer;
+	background-color: #eadaed;
+}
+
+button {
+	padding:  10px 20px;
+	color: white;
+	border-radius: 10px;	/*Rounds the corners*/
+	background-color: var(--purple);
+	border-color: var(--purple);
+	font-size: 18px;
+	transition: 200ms;
+}
+
+button:hover {
+	cursor: pointer;
+	transform: translateY(-2px);
+}
